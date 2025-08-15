@@ -1,14 +1,16 @@
-import BlurText from '@/components/animations/blur-text';
+// import { AuroraText } from '@/components/animations/aurora-text';
+import { AuroraText } from '@/components/animations/magicui/aurora-text';
+import LoadingScreen from '@/components/loading-screen';
 import Logo from '@/components/logo';
 import { Button } from '@/components/ui/button';
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from '@/components/ui/navigation-menu';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { Head } from '@inertiajs/react';
-import { useState } from 'react';
-
-const [loading, setLoading] = useState(false);
+import { useEffect, useState } from 'react';
 
 export default function Welcome() {
+    const [loading, setLoading] = useState(false);
+
     const navigationLinks = [
         { href: '', label: 'Home', active: true },
         { href: 'about-me', label: 'About Me' },
@@ -17,8 +19,25 @@ export default function Welcome() {
         { href: 'contact', label: 'Contact' },
     ];
 
+    useEffect(() => {
+        const initializeData = async () => {
+            setLoading(true);
+            try {
+                await new Promise((resolve) => setTimeout(resolve, 3000));
+            } catch (error) {
+                console.error('Error during initialization:', error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        initializeData();
+    }, []);
+
     return (
         <>
+            <LoadingScreen isLoading={loading} />
+
             <Head title="Home">
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -101,13 +120,9 @@ export default function Welcome() {
                 </div>
             </header>
             <section>
-                <BlurText
-                    text="Isn't this so cool?!"
-                    delay={150}
-                    animateBy="words"
-                    direction="top"
-                    className="mb-8 text-2xl"
-                />
+                <h1 className="text-4xl font-bold tracking-tighter md:text-5xl lg:text-7xl">
+                    Ship <AuroraText>beautiful</AuroraText>
+                </h1>
             </section>
         </>
     );
