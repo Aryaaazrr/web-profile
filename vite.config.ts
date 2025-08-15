@@ -9,6 +9,8 @@ export default defineConfig({
         laravel({
             input: ['resources/css/app.css', 'resources/js/app.tsx'],
             ssr: 'resources/js/ssr.tsx',
+            publicDirectory: 'public',
+            buildDirectory: 'build',
             refresh: true,
         }),
         react(),
@@ -20,6 +22,7 @@ export default defineConfig({
     resolve: {
         alias: {
             'ziggy-js': resolve(__dirname, 'vendor/tightenco/ziggy'),
+            'public': '/public',
         },
     },
 });
