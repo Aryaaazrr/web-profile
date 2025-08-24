@@ -1,4 +1,5 @@
 import { AuroraText } from '@/components/animations/magicui/aurora-text';
+import { InteractiveHoverButton } from '@/components/animations/magicui/interactive-hover-button';
 import ProfileCard from '@/components/animations/ProfileCard';
 import TextType from '@/components/animations/type-text';
 import LoadingScreen from '@/components/loading-screen';
@@ -60,37 +61,11 @@ export default function Home() {
                             if no one applauds. Our future selves will be incredibly proud of what we've achieved today.
                         </p>
 
-                        {/* Buttons */}
                         <div className="mt-7 grid w-full gap-3 sm:inline-flex">
-                            <a
-                                className="inline-flex items-center justify-center gap-x-2 rounded-lg border border-transparent bg-blue-600 px-4 py-3 text-sm font-medium text-white hover:bg-blue-700 focus:bg-blue-700 focus:outline-hidden disabled:pointer-events-none disabled:opacity-50"
-                                href="#"
-                            >
-                                Get started
-                                <svg
-                                    className="size-4 shrink-0"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth="2"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                >
-                                    <path d="m9 18 6-6-6-6" />
-                                </svg>
-                            </a>
-                            <a
-                                className="inline-flex items-center justify-center gap-x-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-gray-800 shadow-2xs hover:bg-gray-50 focus:bg-gray-50 focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 dark:border-neutral-700 dark:bg-neutral-900 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
-                                href="#"
-                            >
-                                Contact sales team
-                            </a>
+                            <InteractiveHoverButton>
+                                I'm Here
+                            </InteractiveHoverButton>
                         </div>
-                        {/* End Buttons */}
-                        {/* End Review */}
                     </div>
                     {/* End Col */}
 
@@ -115,7 +90,7 @@ export default function Home() {
             </section>
 
             {/* Features */}
-            <div className=" lg:py-14">
+            <div className="lg:py-14">
                 {/* Grid */}
                 <div className="md:grid md:grid-cols-2 md:items-center md:gap-12 xl:gap-32">
                     <div>
@@ -223,7 +198,7 @@ export default function Home() {
             {/* End Features */}
 
             {/* Card Blog */}
-            <div className=" lg:py-14">
+            <div className="lg:py-14">
                 {/* Title */}
                 <div className="mx-auto mb-10 max-w-2xl text-center lg:mb-14">
                     <h2 className="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">The Blog</h2>
@@ -362,7 +337,7 @@ export default function Home() {
             {/* End Card Blog */}
 
             {/* Clients */}
-            <div className=" lg:py-14">
+            <div className="lg:py-14">
                 {/* Title */}
                 <div className="mx-auto mb-6 text-center sm:w-1/2 xl:w-1/3">
                     <h2 className="text-xl font-semibold text-gray-800 md:text-2xl md:leading-tight dark:text-neutral-200">
@@ -858,7 +833,7 @@ export default function Home() {
             {/* End Timeline */}
 
             {/* Contact Us */}
-            <div className=" lg:py-14">
+            <div className="lg:py-14">
                 <div className="mx-auto max-w-2xl lg:max-w-5xl">
                     <div className="text-center">
                         <h1 className="text-3xl font-bold text-gray-800 sm:text-4xl dark:text-white">Contact us</h1>
