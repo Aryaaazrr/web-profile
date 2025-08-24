@@ -1,5 +1,5 @@
 import { type ReactNode } from 'react';
-import GuestLayoutTemplate from './guest/guest-layout-template';
+import GuestLayoutTemplate from './guest/guest-simple-layout';
 
 interface GuestLayoutProps {
     children: ReactNode;
