@@ -61,8 +61,8 @@ interface NeonGradientCardProps {
 export const NeonGradientCard: React.FC<NeonGradientCardProps> = ({
     className,
     children,
-    borderSize = 6,
-    borderRadius = 20,
+    borderSize = 0,
+    borderRadius = 30,
     neonColors = {
         firstColor: '#ff00aa',
         secondColor: '#00FFF1',

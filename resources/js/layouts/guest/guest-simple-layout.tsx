@@ -32,7 +32,7 @@ export default function GuestLayoutTemplate({ children, navigationItems = [] }: 
         <div className="min-h-screen bg-background">
             <header
                 className={clsx(
-                    'sticky top-0 z-10 bg-background px-4 transition-all duration-300 md:px-6 lg:px-12',
+                    'sticky top-0 z-50 bg-background px-4 transition-all duration-300 md:px-6 lg:px-12',
                     isScrolled && 'border-b shadow-sm',
                 )}
             >

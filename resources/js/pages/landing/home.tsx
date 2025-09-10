@@ -1,7 +1,9 @@
 import { AuroraText } from '@/components/animations/magicui/aurora-text';
 import { InteractiveHoverButton } from '@/components/animations/magicui/interactive-hover-button';
+import { NeonGradientCard } from '@/components/animations/magicui/neon-gradient-card';
 import ProfileCard from '@/components/animations/ProfileCard';
 import TextType from '@/components/animations/type-text';
+import GuestHero from '@/components/guest-hero';
 import LoadingScreen from '@/components/loading-screen';
 import { GUEST_NAVIGATION_ITEMS } from '@/config/navigation';
 import GuestLayout from '@/layouts/guest.layout';
@@ -39,57 +41,8 @@ export default function Home() {
                 />
             </Head>
 
-            <section className="flex items-center justify-center lg:py-24">
-                <div className="grid gap-4 md:grid-cols-3 md:items-center md:gap-8 xl:gap-20">
-                    <div className="col-span-2">
-                        <div className="space-y-4 md:space-y-6">
-                            <h1 className="block text-3xl font-bold text-gray-800 sm:text-4xl lg:text-6xl lg:leading-tight dark:text-white">
-                                Hello everyone👋, I'am <AuroraText>Achmad Zakariya</AuroraText>
-                            </h1>
-                            <TextType
-                                text={['Fullstack Web Developer', 'Freelance Programmer', 'Happy coding!']}
-                                typingSpeed={75}
-                                pauseDuration={1500}
-                                showCursor={true}
-                                cursorCharacter="|"
-                                textColors={['#4B5563', '#1F2937', '#111827']}
-                                className="text-xl font-semibold md:text-2xl lg:text-3xl"
-                            />
-                        </div>
-                        <p className="mt-3 max-w-2xl text-lg text-gray-800 dark:text-neutral-400">
-                            Others won't understand our struggles and hardships; they only want to hear the success stories. Fight for yourself, even
-                            if no one applauds. Our future selves will be incredibly proud of what we've achieved today.
-                        </p>
+            <GuestHero />
 
-                        <div className="mt-7 grid w-full gap-3 sm:inline-flex">
-                            <InteractiveHoverButton>
-                                I'm Here
-                            </InteractiveHoverButton>
-                        </div>
-                    </div>
-                    {/* End Col */}
-
-                    <div className="overflow-x-hidden- flex w-full items-center justify-end">
-                        <ProfileCard
-                            name="Achmad Zakariya"
-                            title="Fullstack Web Developer"
-                            handle="achmdzkry_"
-                            status="Online"
-                            contactText="Contact Me"
-                            avatarUrl="/assets/img/foto-formal.png"
-                            className="text-xs"
-                            showUserInfo={true}
-                            enableTilt={true}
-                            enableMobileTilt={true}
-                        />
-                    </div>
-
-                    {/* End Col */}
-                </div>
-                {/* End Grid */}
-            </section>
-
-            {/* Features */}
             <div className="lg:py-14">
                 {/* Grid */}
                 <div className="md:grid md:grid-cols-2 md:items-center md:gap-12 xl:gap-32">
@@ -195,7 +148,6 @@ export default function Home() {
                 </div>
                 {/* End Grid */}
             </div>
-            {/* End Features */}
 
             {/* Card Blog */}
             <div className="lg:py-14">
